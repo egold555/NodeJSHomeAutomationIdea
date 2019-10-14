@@ -1,0 +1,14 @@
+{
+  "name": "home-automation-idea",
+  "version": "1.0.0",
+  "description": "Idea for a json api home automation thingy. Its 12:53 am 10/13/19 so idk how long this project will actually go for",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Golde",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "identifier": "floor-lamp",
+        "name": "Floor Lamp",
+        "device_type": "switch",
+        "ip": "192.1.68.0.2"
+    },
+    {
+        "identifier": "samsung-tv",
+        "name": "Living Room TV",
+        "device_type": "tv",
+        "ip": "192.168.0.9"
+    }
+]
