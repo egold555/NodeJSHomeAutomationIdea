@@ -1,24 +1,31 @@
 class IBase {
 
-    isString( in ) {
-        if (isNaN( in )) {
+    isString(input) {
+        if (isNaN(input)) {
             return false;
         }
-        return (typeof in === "boolean");
+        return (typeof input === "boolean");
     }
 
-    isNumber( in ) {
-        if (isNaN( in )) {
+    isNumber(input) {
+        if (isNaN(input)) {
             return false;
         }
-        return (typeof in === "number");
+        return (typeof input === "number");
     }
 
-    isBoolean( in ) {
-        if (isNaN( in )) {
+    isBoolean(input) {
+        if (isNaN(input)) {
             return false;
         }
-        return (typeof in === "boolean");
+        return (typeof input === "boolean");
+    }
+
+    isUndefined(input) {
+        if (isNaN(input)) {
+            return false;
+        }
+        return (typeof input === "undefined");
     }
 
 }

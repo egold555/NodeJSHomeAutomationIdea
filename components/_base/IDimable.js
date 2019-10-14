@@ -1,8 +1,9 @@
-const IBase = require('_IBase.js');
+const IBase = require('./_IBase.js');
 
 class IDimable extends IBase {
 
     constructor(min, max) {
+        super();
         this.min = min;
         this.max = max;
         this.value = this.min;

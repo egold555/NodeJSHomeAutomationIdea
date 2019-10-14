@@ -1,9 +1,10 @@
-const _IBase = require('_IBase.js');
+const IBase = require('./_IBase.js');
 
 class IBooleanState extends IBase {
 
-    constructor() {
-        this.state = false;
+    constructor(defaultState = false) {
+        super();
+        this.state = defaultState;
     }
 
     getState() {

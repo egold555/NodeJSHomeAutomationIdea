@@ -3,8 +3,13 @@ var router = express.Router();
 var responseUtils = require(".././helpers/response_utilities.js");
 
 const Switch = require('.././components/switch/switch.js');
+const DimmerSwitch = require('.././components/switch/dimmer_switch.js');
+const Outlet = require('.././components/outlet.js');
 
 var testSwitch = new Switch();
+var testDimmerSwitch = new DimmerSwitch();
+var testOutlet = new Outlet();
+
 
 router.get('/', function (req, res) {
     responseUtils.successMessage(res, "Sucessully get /test/ route!");
