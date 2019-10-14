@@ -1,9 +1,0 @@
-mainly we need 2 directories
-
-devices/types
-
-storage/devices.yml
-
-in yml it has a list of every device and what its type is.
-
-in the types directory is a js type object thats like is the switch on or off, get state etc
