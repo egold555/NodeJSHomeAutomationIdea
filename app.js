@@ -4,8 +4,10 @@ const port = 3000;
 
 var routes_devices = require('./routes/devices.js');
 var routes_device = require('./routes/device.js');
+var routes_test = require('./routes/test.js');
 
 var helpers_responce_utilities = require("./helpers/response_utilities.js");
+
 
 app.get('/', function (req, res) {
     helpers_responce_utilities.success(res, null, "Hello World! If you see this message, the server is online, and hopefully working!");
@@ -13,6 +15,7 @@ app.get('/', function (req, res) {
 
 app.use('/devices', routes_devices);
 app.use('/device', routes_device);
+app.use('/test', routes_test);
 
 //pretty print json
 //https://github.com/expressjs/express/issues/2044

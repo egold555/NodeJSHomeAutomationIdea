@@ -1,7 +1,11 @@
 module.exports = {
     
-    success(res, data, message = null) {
+    success(res, data = null, message = null) {
         this.sendResponse(res, "success", 200, data, message);
+    },
+    
+    successMessage(res, message = null) {
+        this.sendResponse(res, "success", 200, null, message);
     },
     
     fail(res, message) {

@@ -1,17 +1,14 @@
-const ComponentBase = require('.././componentBase.js');
+const classes = require('extends-classes');
 
-class Switch extends ComponentBase {
-    
-    var state = false;  
+const ComponentBase = require('../_base/_ComponentBase.js');
+const IBooleanState = require('../_base/IBooleanState.js');
 
-    function getState(){
-        return this.state;
+class Switch extends classes(ComponentBase, IBooleanState) {
+
+    __call(method, args) {
+        console.log(`'${method}()' is missing!`);
     }
 
-    function setState(stateIn){
-        this.state = stateIn;
-    }
-    
 }
 
 module.exports = Switch;
