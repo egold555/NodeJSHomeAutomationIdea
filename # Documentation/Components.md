@@ -1,15 +1,40 @@
 # Components
 
-## Switch
+## Base classes
+### _ComponentBase
+| Extends        |
+|----------------|
+| *none*             |
 
-boolean state
-get, set state
+| Function Name | Valid Inputs                                              | Outputs     |
+|---------------|-----------------------------------------------------------|-------------|
+| constructor() | *none*                                                    | *none*      |
 
-## Dimmer switch
+### IBooleanState
+| Function Name | Valid Inputs                                              | Outputs     |
+|---------------|-----------------------------------------------------------|-------------|
+| constructor() | *none*                                                        | *none*  |
+| setState()    | "yes", "no", "true", "false", true, false, 1, 0, "1", "0" | *none*      |
+| getState()    | *none*                                                    | true, false |
 
-boolean state
-float value dimness
+## Input devices
+### Switch
+| Extends        |
+|----------------|
+| _ComponentBase |
+| IBooleanState  |
 
-## Outlet
-boolean state
-get, set state
+| Function Name | Valid Inputs                                              | Outputs     |
+|---------------|-----------------------------------------------------------|-------------|
+| constructor() | *none*                                                    | *none*      |
+
+## Output devices
+### Outlet
+| Extends        |
+|----------------|
+| _ComponentBase |
+| IBooleanState  |
+
+| Function Name | Valid Inputs                                              | Outputs     |
+|---------------|-----------------------------------------------------------|-------------|
+| constructor() | *none*                                                    | *none*      |
