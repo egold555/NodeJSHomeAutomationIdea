@@ -1,4 +1,6 @@
-class IBooleanState {
+const _IBase = require('_IBase.js');
+
+class IBooleanState extends IBase {
 
     constructor() {
         this.state = false;
@@ -10,10 +12,10 @@ class IBooleanState {
 
     //Valid inputs: "yes", "no", "true", "false", true, false, 1, 0
     setState(stateIn) {
-        if(typeof stateIn === "boolean"){
+        if(this.isBoolean(stateIn)){
             this.state = stateIn;
         }
-        else if(typeof stateIn === "number" || typeof stateIn == "string") {
+        else if(this.isNumber(stateIn) || this.isString(stateIn)) {
             if(stateIn == 1 || stateIn.toLowerCase() === "true" ||  stateIn.toLowerCase() === "on"){
                 this.state = true;
             }
