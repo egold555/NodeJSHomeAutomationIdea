@@ -3,9 +3,9 @@ const ComponentBooleanState = require('../components/ComponentBooleanState.js');
 
 class Outlet extends DeviceBase {
 
-    constructor(){
+    constructor(defaultState = false){
         super();
-        this.state = new ComponentBooleanState(false);
+        this.state = new ComponentBooleanState(defaultState);
     }
     
     setState(value){
