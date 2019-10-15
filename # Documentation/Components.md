@@ -10,7 +10,7 @@
 # Components
 
 ## Base classes
-### _ComponentBase
+### ComponentBase
 | Extends        |
 |----------------|
 | *none*         |
@@ -19,19 +19,54 @@
 |---------------|-----------------------------------------------------------|-------------|
 | constructor() | *none*                                                    | *none*      |
 
-### IBooleanState
+### ComponentBooleanState
+| Extends       |
+|---------------|
+| ComponentBase |
+
 | Function Name   | Valid Inputs                                              | Outputs     |
 |-----------------|-----------------------------------------------------------|-------------|
 | *constructor()* | *none*                                                    | *none*      |
 | setState()      | "yes", "no", "true", "false", true, false, 1, 0, "1", "0" | *none*      |
 | getState()      | *none*                                                    | true, false |
 
-## Input devices
-### Switch
+### ComponentDimmable
+| Extends       |
+|---------------|
+| ComponentBase |
+
+| Function Name   | Valid Inputs                                              | Outputs                  |
+|-----------------|-----------------------------------------------------------|--------------------------|
+| constructor()   | min value, max value                                      | *none*                   |
+| setValue()      | number between min and max                                | *none*                   |
+| getState()      | *none*                                                    | number between min & max |
+
+## Input / Output devices
+### Device Base
 | Extends        |
 |----------------|
-| _ComponentBase |
-| IBooleanState  |
+| *none*         |
+
+| Function Name   | Valid Inputs | Outputs     |
+|-----------------|--------------|-------------|
+| *constructor()* | *none*       | *none*      |
+
+## Input devices
+### Switch
+| Extends     |
+|-------------|
+| Device Base |
+
+| Function Name   | Valid Inputs                                              | Outputs     |
+|-----------------|-----------------------------------------------------------|-------------|
+| *constructor()* | *none*                                                    | *none*      |
+| *setState()*    | "yes", "no", "true", "false", true, false, 1, 0, "1", "0" | *none*      |
+| *getState()*    | *none*                                                    | true, false |
+
+### Dimmer Switch
+| Extends    |
+|------------|
+| DeviceBase |
 
 | Function Name   | Valid Inputs                                              | Outputs     |
 |-----------------|-----------------------------------------------------------|-------------|
@@ -41,10 +76,9 @@
 
 ## Output devices
 ### Outlet
-| Extends        |
-|----------------|
-| _ComponentBase |
-| IBooleanState  |
+| Extends    |
+|------------|
+| DeviceBase |
 
 | Function Name   | Valid Inputs                                              | Outputs     |
 |-----------------|-----------------------------------------------------------|-------------|

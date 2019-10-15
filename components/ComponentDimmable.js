@@ -1,6 +1,6 @@
-const IBase = require('./_IBase.js');
+const ComponentBase = require('./ComponentBase.js');
 
-class IDimable extends IBase {
+class ComponentDimmable extends ComponentBase {
 
     constructor(min, max) {
         super();
@@ -42,4 +42,4 @@ class IDimable extends IBase {
 
 }
 
-module.exports = IDimable;
+module.exports = ComponentDimmable;

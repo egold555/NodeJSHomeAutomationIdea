@@ -1,4 +1,4 @@
-class ComponentBase {
+class DeviceBase {
     
     /*Mutiple extends classes override function.*/
     __call(method, args) {
@@ -7,4 +7,4 @@ class ComponentBase {
     
 }
 
-module.exports = ComponentBase;
+module.exports = DeviceBase;

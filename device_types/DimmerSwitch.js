@@ -1,11 +1,11 @@
 const Switch = require('./switch.js');
-const IDimable = require('../_base/IDimable.js');
+const ComponentDimmable = require('../components/ComponentDimmable.js');
 
 class DimmerSwitch extends Switch {
     
     constructor(min = 0, max = 1){
         super();
-        this.brightness = new IDimable(min, max);
+        this.brightness = new ComponentDimmable(min, max);
     }
     
     setBrightness(value){
