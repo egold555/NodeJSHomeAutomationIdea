@@ -9,7 +9,7 @@
   "author": "Eric Golde",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "extends-classes": "^1.0.5"
   }
 }
